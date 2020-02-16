@@ -61,7 +61,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'learning_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,8 +147,8 @@ if cwd == '/app' or cwd[:4] =='/tmp':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # 支持所有的主机头（host header)
-    ALLOWED_HOSTS = ['*']
-    # ALLOWED_HOSTS = ['learning-log-final.herokuapp.com']
+    # ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['learning-log-final.herokuapp.com']
     DEBUG = False
 
     # 静态资产配置
